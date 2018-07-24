@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, AppRegistry, Dimensions, TextInput, ActivityIndicator, Alert } from 'react-native';
 import { Constants } from 'expo';
 
-// You can import from local files
 import AssetExample from './components/AssetExample';
 
-// or any pure javascript modules available in npm
-import { Card } from 'react-native-elements'; // Version can be specified in package.json
+import { Card } from 'react-native-elements';
 
 export default class App extends Component {
   constructor(props){
@@ -73,7 +71,6 @@ export default class App extends Component {
         this.setState({warningMessage: "Blank Message...!!!"});
         return;
       }
-      // this.setState({loadingOn: true});
 
       return fetch('https://private-amnesiac-55fcaa-frontenddevtest.apiary-proxy.com/message',{
           method:"POST",
@@ -84,7 +81,7 @@ export default class App extends Component {
            body:JSON.stringify({message: this.state.message,recipients: this.state.validOnes})
        })
       .then((response) => response.json())
-      .then((responseJson) => { 
+      .then((responseJson) => {
           Alert.alert('Message Sent Successfully');
           this.setState({message:''});
           this.setState({receipientsValue:''});
@@ -93,7 +90,6 @@ export default class App extends Component {
       })
       .catch(function(error) {
         console.log(error);
-          // this.setState({loadingOn: false});
           Alert.alert('Some Error Occured');
       });
   }

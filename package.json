@@ -1,0 +1,14 @@
+{
+  "name": "message-send-box",
+  "version": "0.0.0",
+  "description": "create message send box, with proper validations and add multiple recippients in pills/tags",
+  "author": null,
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "dependencies": {
+    "expo": "^28.0.0",
+    "react": "16.3.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-28.0.0.tar.gz",
+    "react-native-elements": "0.19.1"
+  }
+}
